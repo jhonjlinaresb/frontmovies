@@ -1,0 +1,21 @@
+.header{
+    width: 100vw;
+    height: 20vh;
+    min-height: 2em;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logoContainer{
+    align-items: center;
+    width: 100%;
+    height: 1.5em;
+    min-height: 1em;
+}
+
+.logo{
+    src: url(../../images/logo_rental_movies.svg);
+}
