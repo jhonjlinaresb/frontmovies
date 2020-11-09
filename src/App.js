@@ -6,6 +6,7 @@ import './App.css';
 
 import Home from './containers/Home/Home'
 import Register from './containers/Register/Register'
+import Login from './containers/Login/Login'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
@@ -17,6 +18,7 @@ function App() {
         <Switch>
         <Route path='/' component={Home} exact />
           <Route path='/register' component={Register} exact />
+          <Route path='/login' component={Login} exact />
           </Switch>
         <Footer/>
         </Route>
