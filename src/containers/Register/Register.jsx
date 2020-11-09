@@ -2,6 +2,7 @@ import React from 'react'
 import './Register.scss'
 import { Form, Input, Button, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 
 const Register = () => {
@@ -50,16 +51,16 @@ const Register = () => {
                     <Checkbox>Remember me</Checkbox>
                 </Form.Item>
 
-                <a className="login-form-forgot" href="">
+                <Link className="login-form-forgot" to="#">
                     Forgot password
-        </a>
+        </Link>
             </Form.Item>
 
             <Form.Item>
                 <Button type="primary" htmlType="submit" className="login-form-button">
                     Log in
         </Button>
-        Or <a href="">register now!</a>
+        Or <Link href="#">register now!</Link>
             </Form.Item>
         </Form>
         </div>

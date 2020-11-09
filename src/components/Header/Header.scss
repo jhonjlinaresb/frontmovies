@@ -1,10 +1,10 @@
 .header{
     width: 100vw;
-    height: 20vh;
+    height: 15vh;
     min-height: 2em;
     background-color: black;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     position: fixed;
@@ -19,5 +19,10 @@
 }
 
 .logo{
-    src: url(../../images/logo_rental_movies.svg);
+    height: 2em;
+    width: 100%;
+    background-image: url(../../images/logo_rental_movies.svg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    
 }
