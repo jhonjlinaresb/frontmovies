@@ -114,7 +114,6 @@ const Register = () => {
         >
 
             <Form.Item
-                label="Nombre"
                 name="name"
                 rules={[
                     {
@@ -123,10 +122,9 @@ const Register = () => {
                     },
                 ]}
             >
-                <Input />
+                <Input placeholder="NAME"/>
             </Form.Item>
             <Form.Item
-                label="Email"
                 name="email"
                 rules={[
                     {
@@ -139,11 +137,10 @@ const Register = () => {
                     }
                 ]}
             >
-                <Input />
+                <Input placeholder="EMAIL"/>
             </Form.Item>
 
             <Form.Item
-                label="Contraseña"
                 name="password"
                 rules={[
                     {
@@ -156,7 +153,7 @@ const Register = () => {
                     }
                 ]}
             >
-                <Input.Password />
+                <Input.Password placeholder="PASSWORD"/>
             </Form.Item>
 
             <Form.Item {...tailLayout}>
