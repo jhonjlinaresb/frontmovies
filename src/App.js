@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+import React from 'react';
+import logo from './logo.svg';
+=======
 import React from 'react'
 // import logo from './logo.svg';
 
 import { Switch, BrowserRouter, Route } from 'react-router-dom'
+>>>>>>> 82dd965a6aeaf70a43b7e0969df3ba519cde9941
 import './App.css';
 
 import Home from './containers/Home/Home'
