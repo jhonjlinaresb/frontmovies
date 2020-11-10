@@ -52,7 +52,7 @@ const Login = () => {
                     },
                     {
                         type:'email',
-                        message: 'El campo debe ser un email',
+                        message: 'El email que ha rgistrado',
                     }
                 ]}
             >
@@ -78,7 +78,7 @@ const Login = () => {
             <Form.Item {...tailLayout}>
                 <Button type="primary" htmlType="submit">
                     Login
-        </Button>
+                </Button>
             </Form.Item>
         </Form>
         </div>
