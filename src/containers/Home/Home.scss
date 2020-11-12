@@ -2,3 +2,17 @@
     height: 400px;
     color: grey;
 }
+.moviesContent{
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vh;
+    width: 95vw;
+    background-color: aqua;
+}
+.movies{
+    margin-top: 2vh;
+    border: solid 1px darkgrey;
+    width: 90vw;
+    height: 65vh;
+}
