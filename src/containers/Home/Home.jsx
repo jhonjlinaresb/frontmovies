@@ -6,24 +6,40 @@ import './Home.scss';
 
 const Home =() =>{
     const [movie, setmovie] = useState([]);
+
+    useEffect(() => {
+        axios.get('https://peliculasdb.herokuapp.com/movie/')
+        .then(res => {
+            setmovie(res.data)
+        })
+        .catch(error => {console.log(error)});
+    }, [])
+    
     const Movies =()=>{
-         useEffect(() => {
-             axios.get('https://peliculasdb.herokuapp.com/movie')
-             .then(res=>{
-                setmovie(res.data?.map(item=>{
-                    return(item)}));
-            })
-        },[]);
-        return(<div></div>);
+        
+        return(<div>
+            {movie?.map(item=>{
+                console.log(item)
+                return (<div className="grid">
+                            <div className="movieGrid">{item.title}</div>
+                            {<img className="images" src={"https://image.tmdb.org/t/p/w185" + item.poster_path} alt="poster of the movie"></img>}
+                            <div className="movieGrid">Average vote: {item.vote_average}</div>
+                        </div>)
+            })}
+        </div>);
     }
-    return ( 
+    return (             
+    <div>
+        <div className="center">
+        User has a token
+        </div>
         <div className="moviesContent">
-            User has a token
             <div className="movies">
-                <Movies className="moviesOrder">{console.log("uno")}
-                </Movies>
+                    <Movies></Movies>
             </div>
-        </div>      
+        </div>    
+    </div>
+  
     )
 } 
 
