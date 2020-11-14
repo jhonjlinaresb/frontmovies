@@ -21,9 +21,9 @@ const Register = () => {
         axios.post(process.env.REACT_APP_BASE_URL+'/user/signup', user)
             .then(res => {
                 console.log(res.data)
-                notification.success({ message :'Usuario registrado',description:'Usuario registrado con éxito'})
+                notification.success({ message: 'User has bees Registered', description: 'User successfuly Registered' })
             }).catch(error => {
-                notification.error({ message: 'Error en el registro', description: 'Hubo un error al tratar de registrar al usuario, revisa tus campos' })
+                notification.error({ message: 'Register error', description: 'There was a problem trying to register the user account, please check the input fields' })
             })
     };
 
