@@ -18,18 +18,18 @@ const Header = ({user,setUser}) => {
          {user
          ?<div className="linksContainer">
             <div className="registerContainer">
-                <Link to='/profile'><button className="registerButton">Profile</button></Link>
+                <Link to='/profile'><button className="headerButtons">Profile</button></Link>
             </div>
             <div className="registerContainer">
-                <Link to='/' onClick={logoutUser}><button className="registerButton">Logout</button></Link>
+                <Link to='/' onClick={logoutUser}><button className="headerButtons">Logout</button></Link>
             </div>
         </div>
         :<div>
             <div className="registerContainer">
-                <Link to='/login'><button className="registerButton">Login</button></Link>
+                <Link to='/login'><button className="headerButtons">Login</button></Link>
             </div>
             <div className="registerContainer">
-                <Link to='/register'><button className="registerButton">Register</button></Link>
+                <Link to='/register'><button className="headerButtons">Register</button></Link>
             </div>
         </div>
         }
