@@ -1,6 +1,10 @@
 import React from 'react';
 import { Form, Input, Button, notification } from 'antd';
+<<<<<<< HEAD
 import './Login.scss'
+=======
+import './Login.scss';
+>>>>>>> feature/feature/UserProfile
 import axios from 'axios';
 
 const layout = {
@@ -19,7 +23,7 @@ const tailLayout = {
 };
 const Login = () => {
     const onFinish = (user) => {
-        axios.post(process.env.REACT_APP_BASE_URL+'/users/login', user)
+        axios.post(process.env.REACT_APP_BASE_URL+'/user/login', user)
             .then(res => {
                 console.log(res.data)
                 notification.success({ message :'Bienvenido a RENTALMOVIES',description:'Usuario logueado con éxito'})
