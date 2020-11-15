@@ -9,6 +9,7 @@
     justify-content: space-evenly;
     position: fixed;
     top: 0;
+    z-index: -1;
 }
 
 .logoContainer{
@@ -28,7 +29,8 @@
 }
 
 .registerButton{
-    width: 25vw;
+    width: 20vw;
+    margin: 1em;
     height: 3em;
     font-size: 1em;
 }

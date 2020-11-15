@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.movieViewer{
+  position: absolute;
+  left: 7em;
+  display: flex;
+  
+}
+.movieViewer >*{
+  padding: 1vw;
+}
+.movieViewer img{
+  width: 24vw;
+  height: auto;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom'
 import { Form, Input, Button, notification } from 'antd';
-import './Login.scss'
+import './Login.scss';
 import axios from 'axios';
 
 const layout = {
