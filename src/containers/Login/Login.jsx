@@ -1,10 +1,6 @@
 import React from 'react';
 import { Form, Input, Button, notification } from 'antd';
-<<<<<<< HEAD
-import './Login.scss'
-=======
 import './Login.scss';
->>>>>>> feature/feature/UserProfile
 import axios from 'axios';
 
 const layout = {
