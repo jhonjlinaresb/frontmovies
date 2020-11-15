@@ -15,8 +15,9 @@ import Profile from './containers/Profile/Profile'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Login from './containers/Login/Login';
+import Admin from './containers/Admin/Admin';
 
-const Movie = () =>{
+const Movie = ({user,setUser}) =>{
   const [info, setInfo] = useState(false);
   let { id } = useParams();
 
@@ -27,7 +28,20 @@ const Movie = () =>{
     }).catch((error)=>{
         setInfo(false);
     })
-}, [])
+  }, [])
+
+  const handleRentMovie=()=>{
+  let token = localStorage.getItem("authToken");
+    axios.post('https://peliculasdb.herokuapp.com/user/rent/'+id,{},{
+      headers: { Authorization:'Basic '+ token }
+      })
+      .then(res => {
+          setUser(res.data)
+          localStorage.setItem('user', JSON.stringify(res.data))
+      }).catch((error)=>{
+          console.log(error);
+      })
+  }
 
   return (<div>
     {info
@@ -39,6 +53,12 @@ const Movie = () =>{
           <div className="movieGrid"><h2>{info.title}</h2></div>
           <div className="movieGrid">{info.overview}</div>
           <div className="movieGrid">Average vote: {info.vote_average}</div>
+            {user.rented !=null
+            ?<div className="movie_not_rented">You actually have a movie rented</div>
+            :<div><button className="movie_rented" onClick={handleRentMovie}>
+              Rent Movie
+              </button></div>
+            }
         </div>  
       </span>
       :<span>Cargando...</span>
@@ -54,14 +74,18 @@ function App() {
       <Route>
         <Header setUser={setUser} user={user}/>
         <Switch>
+          
           <Route path='/' exact >
-            <Home user={user}></Home>
+            {user && user.role !== 0
+            ?<Admin></Admin>
+            :<Home user={user}></Home>
+            }
           </Route>
           <Route path='/login' exact >
             <Login setUser={setUser}></Login>
           </Route>
           <Route path='/register' component={Register} exact />
-          <Route path='/movie/:id' children={<Movie/>} exact />
+          <Route path='/movie/:id' children={<Movie user={user} setUser={setUser} />} exact />
           <Route path='/profile' component={Profile} exact />
         </Switch>
         <Footer/>

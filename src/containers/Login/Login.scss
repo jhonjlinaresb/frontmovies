@@ -1,22 +1,13 @@
-.formContainer {
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 25vw 0 25vw;
-}
-
 input {
     width: 50vw;
-    height: 2em;
+    height: 3em;
     padding: 1em;
     background-color: black;
     color: #cc1518;
     margin: 1em 1em 1em 1em ;
     text-align: center;
     font-size: 1em;
+    border: none;
 }
 
 ::placeholder {
@@ -35,8 +26,4 @@ button{
     width: 30vw;
     margin-top: 1em;
     padding: 1em;
-}
-.centered{
-    display: flex;
-    flex-direction: column;
 }

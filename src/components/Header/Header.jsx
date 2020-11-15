@@ -16,7 +16,7 @@ const Header = ({user,setUser}) => {
             <Link to='/'><span className="logo"></span></Link>
          </div>
          {user
-         ?<div>
+         ?<div className="linksContainer">
             <div className="registerContainer">
                 <Link to='/profile'><button className="registerButton">Profile</button></Link>
             </div>
