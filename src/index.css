@@ -5,8 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #191818;
-  color: white;
+  background-color: #191818!important;
+  color: white!important;
   overflow-x: hidden;
 }
 

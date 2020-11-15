@@ -1,98 +1,42 @@
-import React from 'react';
-import { Form, Input, Button, notification } from 'antd';
+import React, { useState } from 'react';
+import './Register.scss'; 
+import "antd/dist/antd.css";
+import { notification } from "antd";
+import { useHistory } from 'react-router-dom'
 import axios from 'axios';
-import './Register.scss'
-const layout = {
-    labelCol: {
-        span: 8,
-    },
-    wrapperCol: {
-        span: 16,
-    },
-};
-const tailLayout = {
-    wrapperCol: {
-        offset: 8,
-        span: 16,
-    },
-};
+
+
 const Register = () => {
-    const onFinish = (user) => {
-        axios.post(process.env.REACT_APP_BASE_URL+'/user/signup', user)
-            .then(res => {
-                console.log(res.data)
-                notification.success({ message: 'User has bees Registered', description: 'User successfuly Registered' })
-            }).catch(error => {
-                notification.error({ message: 'Register error', description: 'There was a problem trying to register the user account, please check the input fields' })
-            })
+    const [newUser,setNewUser] = useState({});
+
+    const history = useHistory({});
+    
+    const handleSubmit = event => {
+        event.preventDefault(); // para evitar refrescar la página
+        axios.post('https://peliculasdb.herokuapp.com/user/signup', {
+            name: event.target.name.value,
+            email: event.target.email.value,
+            password: event.target.password.value,
+        })
+        .then(res => {
+            setNewUser(res.data);
+            notification.success({ message: 'Account created succesfully, please use your email and password to login', description: 'Bienvenide ' + newUser.name })
+            setTimeout(() => {
+                history.push('/login')
+            }, 1000);
+        })
+        .catch(error => { alert("user already exists"); console.log(process.env);})
     };
 
-    const onFinishFailed = (errorInfo) => {
-        console.log('Failed:', errorInfo);
-    };
     return (
-        <div className="formContainer">
-        <Form
-            {...layout}
-            name="basic"
-            initialValues={{
-                remember: true,
-            }}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-        >
-
-            <Form.Item
-                name="name"
-                rules={[
-                    {
-                        required: true,
-                        message: 'Por favor introduzca su nombre!',
-                    },
-                ]}
-            >
-                <Input placeholder="NAME"/>
-            </Form.Item>
-            <Form.Item
-                name="email"
-                rules={[
-                    {
-                        required: true,
-                        message: 'Por favor introduzca su email!',
-                    },
-                    {
-                        type:'email',
-                        message: 'El campo debe ser un email',
-                    }
-                ]}
-            >
-                <Input placeholder="EMAIL"/>
-            </Form.Item>
-
-            <Form.Item
-                name="password"
-                rules={[
-                    {
-                        required: true,
-                        message: 'Por favor introduzca su contraseña!',
-                    },
-                    {
-                        pattern:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/, 
-                        message: 'Su contraseña debe contener al menos una minúscula, una mayúscula, un número,un carácter especial, y debe estar entre 8 y 10 carácteres de longitud!',
-                    }
-                ]}
-            >
-                <Input.Password placeholder="PASSWORD"/>
-            </Form.Item>
-
-            <Form.Item {...tailLayout}>
-                <Button type="primary" htmlType="submit">
-                    Submit
-        </Button>
-            </Form.Item>
-        </Form>
+        <div className="centered">
+            <form className="centered" onSubmit={handleSubmit} >
+                <label>Name: <input name="name" required/></label>
+                <label>Email: <input name="email" required/></label>
+                <label>Password: <input name="password" type="password" required/></label>
+                <input type="submit" value="Submit"/>
+            </form>
         </div>
     )
-}
-
+};
 export default Register;
