@@ -2,11 +2,11 @@
 
 This is the **Frontendmovies**. An application that performs actions such as:
 
--Register User
--Login User
--Home View for Users
--Admin View for Administrator
--Films for rent. 
+- Register User
+- Login User
+- Home View for Users
+- Admin View for Administrator
+- Films for rent. 
 
  **Technologies Used** 
  - ReactJS 
