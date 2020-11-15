@@ -50,3 +50,22 @@
   width: 24vw;
   height: auto;
 }
+
+.movie_not_rented{
+    display: flex;
+    justify-content: center;
+    background: crimson;
+}
+.movie_rented{
+  color: black;
+  background-color: white;
+  border-radius: 0.5em;
+  width: 10vw;
+  height: 5vh;
+  padding: 0;
+  border: none;
+}
+.movie_rented:hover{
+  transition: ease-in-out 0.5s;
+  background-color: darkred;
+}
