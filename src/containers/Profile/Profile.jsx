@@ -3,6 +3,7 @@ import './Profile.scss'
 
 function Profile() {
     let userData= localStorage.getItem.user;
+    console.log(userData);
     return (
         <div className="profileContainer">
             <section>
