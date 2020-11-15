@@ -1,47 +1,98 @@
-
 //import logo from '../../logo.svg';
-import React, { Component } from 'react'
-import { Carousel } from 'antd'
-import { Image } from 'antd'
-import './Home.scss'
+import {useHistory } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import './Home.scss';
 
-const contentStyle = {
-  height: '550px',
-  color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#3195FF',
-};
-class Home extends Component {
-    render(){
-        return (
-    <div className="home">        
-    <Carousel autoplay>
+
+const Home =() =>{
+    const [movie, setmovie] = useState([]);
+    const [current_page, setPage] = useState(0);
+
+    useEffect(() => {
+        axios.get('https://peliculasdb.herokuapp.com/movie/')
+        .then(res => {
+            setmovie(res.data)
+        })
+        .catch(error => {console.log(error)});
+    }, [])
+    
+    const history = useHistory();
+
+    const routeChange = (item) =>{ 
+      let path = `/movie/${item.id}`; 
+      history.push(path);
+    }
+
+    const Movies =()=>{
+        
+        return(<div>
+            {movie?.map(item=>{
+                console.log(item)
+                return (<div className="grid" onClick={()=>{routeChange(item)}}>    
+                            {<img className="images" src={"https://image.tmdb.org/t/p/w185" + item.poster_path} alt="poster of the movie"></img>}
+                            <div className="movieGrid">{item.title}</div>
+                            <div className="movieGrid">Average vote: {item.vote_average}</div>
+                        </div>)
+            })}
+        </div>);
+    }
+
+    const handleScroll= event =>{
+        let max_scroll = event.target.offsetWidth;
+        let follow_button_left = document.getElementById('follow_left');
+        let follow_button_right = document.getElementById('follow_right');
+        if(event.target.scrollLeft === max_scroll){
+            follow_button_right.style.display = 'none';
+        }else{
+            follow_button_right.style.display = 'block';
+        }
+
+        if(event.target.scrollLeft === 0){
+            follow_button_left.style.display = 'none';
+        }else{
+            follow_button_left.style.display = 'block';
+        }
+    }
+
+    const updateMovie = ()=>{
+        axios.get('https://peliculasdb.herokuapp.com/movie/'+current_page)
+        .then(res => {
+            setmovie(res.data)
+        })
+        .catch(error => {console.log(error)});
+    }
+
+    const getLast = ()=>{
+        setPage(current_page-1);
+        updateMovie();
+    }
+
+    const getNext = ()=>{
+        setPage(current_page+1);
+        updateMovie();
+    }
+
+    return (             
     <div>
-    <h1 style={contentStyle}>
-    <p>Welcome to Clinic Dental</p>
-    <Image width={300} src="https://i.ibb.co/Ht0wZrK/dentalicon.png"/> 
-    </h1>
+        <div className="center">
+        User has a token
+        <img src="" alt=""/>
+        </div>
+        <div className="moviesContent" onScroll={handleScroll}>
+            <div className="movies">
+                <Movies></Movies>
+            </div>
+        </div>
+        <button id="follow_left" className="follow_left"> + </button>
+        <button id="follow_right" className="follow_right"> + </button>
+        <div className="page_buttons">
+            {current_page === 0 ?'':<button className="next_page" onClick={getLast}>last page</button>}
+            <button className="next_page" onClick={getNext}>next page</button>
+        </div>    
     </div>
-    <div>
-    <h1 style={contentStyle}>
-    <p>Services Odontologics</p>
-    <Image width={400} src="https://i.ibb.co/KyP8CcL/dientes.png"/> 
-    </h1>
-    </div>
-  </Carousel>
-  </div>
-  );}
-}
+  
+    )
+} 
 
-export default Home; 
-
-{/* <div className="home">
-                <div className="App">
-                    <header className="App-header">
-                        <img src={logo} className="App-logo" alt="logo" />
-                            <p>
-                            THIS IS THE HOME AREA
-                            </p>
-                    </header>
-                </div> */}
+export default Home;
