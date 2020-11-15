@@ -89,7 +89,7 @@ const tailLayout = {
 };
 const Register = () => {
     const onFinish = (user) => {
-        axios.post(process.env.REACT_APP_BASE_URL+'/users/register', user)
+        axios.post(process.env.REACT_APP_BASE_URL+'/user/signup', user)
             .then(res => {
                 console.log(res.data)
                 notification.success({ message :'Usuario registrado',description:'Usuario registrado con éxito'})
@@ -158,7 +158,7 @@ const Register = () => {
 
             <Form.Item {...tailLayout}>
                 <Button type="primary" htmlType="submit">
-                    Submit
+                    Register
         </Button>
             </Form.Item>
         </Form>
