@@ -21,3 +21,6 @@ code {
   padding-top: 15vh;
   padding-bottom: 10vh;
 }
+button{
+  outline: none;
+}
