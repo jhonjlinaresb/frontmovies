@@ -13,6 +13,7 @@ import Profile from './containers/Profile/Profile'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Login from './containers/Login/Login';
+import Admin from './containers/Admin/Admin';
 
 const Movie = ({user,setUser}) =>{
   const [info, setInfo] = useState(false);
@@ -71,8 +72,12 @@ function App() {
       <Route>
         <Header setUser={setUser} user={user}/>
         <Switch>
+          
           <Route path='/' exact >
-            <Home user={user}></Home>
+            {user && user.role !== 0
+            ?<Admin></Admin>
+            :<Home user={user}></Home>
+            }
           </Route>
           <Route path='/login' exact >
             <Login setUser={setUser}></Login>
