@@ -1,7 +1,7 @@
+import React, { useState, useEffect } from 'react'
 
 //import React, {useState} from 'react'
 //import logo from './logo.svg';
-import React, { useState, useEffect ,Profiler} from 'react'
 //import logo from './logo.svg';
 //import {useEffect} from 'react';
 //import {useState} from 'react';
@@ -47,27 +47,19 @@ const Movie = () =>{
 }
 
 function App() {
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')))
-
-     const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')));
-     useEffect(()=>(
-       setUser(localStorage.setItem('user',"token"),console.log("uno"))
-     ),[]); 
+  const [user, setUser] = useState({});
+   console.log(user)
   return (
     <BrowserRouter>
       <Route>
-        <Header/>
+        <Header setUser={setUser} user={user}/>
         <Switch>
-        <Route path='/' component={Home} exact >
-          <Route path='/register' component={Register} exact />
-          <Route path='/login' exact >
-            <Login setUser={setUser}></Login> 
+          <Route path='/' exact >
+            <Home user={user}></Home>
           </Route>
-          
-        </Route>
-
-          <Route path='/' component={Home} exact />
-          <Route path='/login' component={Login} exact />
+          <Route path='/login' exact >
+            <Login setUser={setUser}></Login>
+          </Route>
           <Route path='/register' component={Register} exact />
           <Route path='/movie/:id' children={<Movie/>} exact />
           <Route path='/profile' component={Profile} exact />
