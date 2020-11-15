@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom'
 import { Form, Input, Button, notification } from 'antd';
 import './Login.scss'
 import axios from 'axios';
@@ -17,20 +18,21 @@ const tailLayout = {
         span: 16,
     },
 };
-const Login = () => {
+const Login = ({setUser}) => {
+    const history = useHistory();
     const onFinish = (user) => {
-        axios.post(process.env.REACT_APP_BASE_URL+'/users/login', user)
+        axios.post(process.env.REACT_APP_BASE_URL+'/user/login', user)
             .then(res => {
-                console.log(res.data)
-                notification.success({ message :'Bienvenido a RENTALMOVIES',description:'Usuario logueado con éxito'})
-            }).catch(error => {
-                notification.error({ message: 'Error en el registro', description: 'Hubo un error al tratar de registrar al usuario, revisa tus campos' })
-            })
-    };
-
-    const onFinishFailed = (errorInfo) => {
-        console.log('Failed:', errorInfo);
-    };
+            setUser(res.data.user) 
+            localStorage.setItem('authToken',res.data.token);
+            localStorage.setItem('user',JSON.stringify(res.data.user))
+            notification.success({message:'Bienvenido',description:'Bienvenido '+user.email})
+            setTimeout(() => {
+                history.push('/')
+            }, 1000);
+        })
+        .catch(error=>console.log(error))
+    }
     return (
         <div className="formContainer">
         <Form
@@ -40,7 +42,6 @@ const Login = () => {
                 remember: true,
             }}
             onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
         >
 
             <Form.Item

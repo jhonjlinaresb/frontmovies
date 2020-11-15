@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 // import logo from './logo.svg';
 
 import { Switch, BrowserRouter, Route } from 'react-router-dom'
@@ -11,6 +11,7 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
 function App() {
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')))
   return (
     <BrowserRouter>
       <Route>
@@ -18,7 +19,9 @@ function App() {
         <Switch>
         <Route path='/' component={Home} exact />
           <Route path='/register' component={Register} exact />
-          <Route path='/login' component={Login} exact />
+          <Route path='/login' exact >
+            <Login setUser={setUser}></Login> 
+          </Route>
           </Switch>
         <Footer/>
         </Route>

@@ -1,13 +1,11 @@
 
 //import logo from '../../logo.svg';
-import React, { Component } from 'react'
+import React from 'react'
 import './Home.scss'
 import { Card, Image } from 'antd';
 
-const { Meta } = Card;
-
-class Home extends Component {
-  render(){
+const Home = () => {
+      
       return (
 
       <div className="home">
@@ -30,6 +28,5 @@ class Home extends Component {
             </div>
       </div>
       );}
-}
 
 export default Home; 
