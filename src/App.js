@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-import React, {useState} from 'react'
-// import logo from './logo.svg';
-=======
-import React, { useState, useEffect ,Profiler} from 'react'
->>>>>>> 68e4b649493ecc10ff9270158854fd09d1c5ff05
 
-// import logo from './logo.svg';
+//import React, {useState} from 'react'
+//import logo from './logo.svg';
+import React, { useState, useEffect ,Profiler} from 'react'
+//import logo from './logo.svg';
 //import {useEffect} from 'react';
 //import {useState} from 'react';
 import { Switch, BrowserRouter, Route, useParams } from 'react-router-dom'
@@ -50,34 +47,31 @@ const Movie = () =>{
 }
 
 function App() {
-<<<<<<< HEAD
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')))
-=======
-//  const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')));
-//  useEffect(()=>(
-//    setUser(localStorage.setItem('user',"token"),console.log("uno"))
-//  ),[]); 
->>>>>>> 68e4b649493ecc10ff9270158854fd09d1c5ff05
+
+     const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')));
+     useEffect(()=>(
+       setUser(localStorage.setItem('user',"token"),console.log("uno"))
+     ),[]); 
   return (
     <BrowserRouter>
       <Route>
         <Header/>
         <Switch>
-<<<<<<< HEAD
-        <Route path='/' component={Home} exact />
+        <Route path='/' component={Home} exact >
           <Route path='/register' component={Register} exact />
           <Route path='/login' exact >
             <Login setUser={setUser}></Login> 
           </Route>
-          </Switch>
-=======
+          
+        </Route>
+
           <Route path='/' component={Home} exact />
           <Route path='/login' component={Login} exact />
           <Route path='/register' component={Register} exact />
           <Route path='/movie/:id' children={<Movie/>} exact />
           <Route path='/profile' component={Profile} exact />
         </Switch>
->>>>>>> 68e4b649493ecc10ff9270158854fd09d1c5ff05
         <Footer/>
         </Route>
     </BrowserRouter>
