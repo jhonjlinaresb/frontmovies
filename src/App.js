@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect ,Profiler} from 'react'
+
 // import logo from './logo.svg';
 //import {useEffect} from 'react';
 //import {useState} from 'react';
@@ -8,9 +9,10 @@ import './App.css';
 
 import Home from './containers/Home/Home'
 import Register from './containers/Register/Register'
-import Login from './containers/Login/Login'
+import Profile from './containers/Profile/Profile'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import Login from './containers/Login/Login';
 
 const Movie = () =>{
   const [info, setInfo] = useState(false);
@@ -52,12 +54,11 @@ function App() {
       <Route>
         <Header/>
         <Switch>
-          <Route path='/' exact >
-            <Home ></Home>
-          </Route>
-          <Route path='/register' component={Register} exact />
+          <Route path='/' component={Home} exact />
           <Route path='/login' component={Login} exact />
+          <Route path='/register' component={Register} exact />
           <Route path='/movie/:id' children={<Movie/>} exact />
+          <Route path='/profile' component={Profile} exact />
         </Switch>
         <Footer/>
         </Route>

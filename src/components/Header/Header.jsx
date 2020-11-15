@@ -11,6 +11,11 @@ const Header = () => {
          </Link>
          </div>
          <div className="registerContainer">
+         <Link to='/login'>
+         <button className="registerButton">Login</button>
+         </Link>
+         </div>
+         <div className="registerContainer">
          <Link to='/register'>
          <button className="registerButton">Register</button>
          </Link>
