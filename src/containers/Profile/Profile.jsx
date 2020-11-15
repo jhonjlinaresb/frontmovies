@@ -1,7 +1,7 @@
 import React from 'react'
 import './Profile.scss'
 
-function Profile ({ user }) {
+function Profile ({ user, movie }) {
     let userData= localStorage.getItem.user;
     console.log(userData);
     return (
@@ -13,6 +13,7 @@ function Profile ({ user }) {
 
                 <div className="userMovie">
                     <h3>Your Movie {user?.user}</h3>
+                     <h5>You have a movie rent{movie?.id}</h5>
                 </div>
         </div>
     )
