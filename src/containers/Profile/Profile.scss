@@ -7,16 +7,24 @@
     justify-content: space-evenly;
 }
 
+#userLogo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    position: absolute;
+    top: 15em;
+}
 .userInformation {
     width: 20vw;
     height: 40vh;
     display: flex;
     align-items: center;
-    padding: 1em;
+    padding: 5px;
     border: 1px solid red;
 }
 .userInformation:hover{
-    bottom: 2px;
+    bottom: 5px;
+    border-bottom: black 2px solid;
 }
 
 .userMovie {

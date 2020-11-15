@@ -7,7 +7,8 @@ function Profile ({ user }) {
     return (
         <div className="profileContainer">
                 <div className="userInformation">
-                   <h3>Bienvenido {user?.email}</h3>
+                   <img id="userLogo" src="https://i.ibb.co/9n7G1jC/image.png" alt="user"></img>
+                   <h3>Bienvenido: {user?.email}</h3>
                 </div>
 
                 <div className="userMovie">
