@@ -1,5 +1,7 @@
 # Frontend RENTALMOVIES
 
+[Heroku Deply](https://frontrentalmovies.herokuapp.com/)
+
 This is the **Frontendmovies**. An application that performs actions such as:
 
 - Register User
@@ -11,7 +13,9 @@ This is the **Frontendmovies**. An application that performs actions such as:
  **Technologies Used** 
  - MySQL
  - Express
+ - Express-Favico
  - Heroku
+ - Heroku-Cli
  - ReactJS 
  - Redux 
  - Router DOM 
