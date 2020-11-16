@@ -4,6 +4,8 @@ import './Profile.scss'
 function Profile ({ user }) {
     let userData= localStorage.getItem.user;
     console.log(userData);
+    // /rent/:id
+    
     return (
         <div className="profileContainer">
                 <div className="userInformation">

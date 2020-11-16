@@ -20,7 +20,9 @@
     display: flex;
     align-items: center;
     padding: 5px;
-    border: 1px solid red;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 2.5em;
 }
 .userInformation:hover{
     bottom: 5px;
@@ -34,5 +36,7 @@
     flex-direction: column;
     align-items: center;
     padding: 1em;
-    border: 1px solid red;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 2.5em;
 }

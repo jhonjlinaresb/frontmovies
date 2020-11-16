@@ -17,10 +17,16 @@ code {
 #root{
   display: flex;
   justify-content: center;
-  height: 75vh;
+  height: 100vh;
   padding-top: 15vh;
   padding-bottom: 10vh;
+  background-image: url(https://babbletop.com/wp-content/uploads/2018/05/years-for-movies-1000x563.jpg);
+  background-size: 50%;
+  background-repeat: repeat repeat;
 }
+   #root:hover > img{
+      opacity: 0.5;
+    }
 button{
   outline: none;
 }
