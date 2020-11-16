@@ -86,7 +86,9 @@ function App() {
           </Route>
           <Route path='/register' component={Register} exact />
           <Route path='/movie/:id' children={<Movie user={user} setUser={setUser} />} exact />
-          <Route path='/profile' component={Profile} exact />
+          <Route path='/profile' exact >
+            <Profile  user = {user} setUser={setUser}></Profile>
+          </Route>
         </Switch>
         <Footer/>
         </Route>

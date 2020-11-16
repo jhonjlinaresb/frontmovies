@@ -1,11 +1,9 @@
 import React from 'react'
 import './Profile.scss'
 
-function Profile ({ user }) {
-    let userData= localStorage.getItem.user;
-    console.log(userData);
-    // /rent/:id
-    
+function Profile ({ setUser }) {
+    axios.get('https://peliculasdb.herokuapp.com/user/profile')
+    .then(res => {res.data.user}  )    
     return (
         <div className="profileContainer">
                 <div className="userInformation">
