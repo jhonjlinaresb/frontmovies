@@ -20,9 +20,7 @@ code {
   height: 100vh;
   padding-top: 15vh;
   padding-bottom: 10vh;
-  background-image: url(https://babbletop.com/wp-content/uploads/2018/05/years-for-movies-1000x563.jpg);
-  background-size: 50%;
-  background-repeat: repeat repeat;
+  background-image: url(https://i.ibb.co/yPbVpmL/image.png);
 }
    #root:hover > img{
       opacity: 0.5;
