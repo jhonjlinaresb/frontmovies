@@ -123,6 +123,8 @@
     transition: ease-in-out 0.5s;    
 }
 .Movietext{
-    position: fixed;
+    position: absolute;
+    top: 50vh;
+    left: 4vw;
     font-size: 5vh;
 }
