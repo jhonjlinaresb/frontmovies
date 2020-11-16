@@ -62,11 +62,7 @@ function Profile ({ user ,setUser }) {
             }
         </div>)
     }
-
-
-
-    
-
+  
     return (
         <div className="profileContainer">
                 <div className="userInformation">

@@ -19,4 +19,58 @@ This is the **Frontendmovies**. An application that performs actions such as:
 
 ## Create files and folders
 
- Getting Started with  **Create React App** and install dependencies.
+ Getting Started with  **Create React App** and install dependencies:
+
+  >npm i -y 
+
+After...
+
+ >npm start
+
+## Created By;
+
+- Jhon Jairo Linares [GitHub](https://github.com/jhonjlinaresb)
+- Gor Vardayan [GitHub](https://github.com/Gor-vardanyan)
+- Ignacio Merello [GitHub](https://github.com/ignaciomerello)
+
+## Diagram
+
+This is the diagram as it works at the User level:
+
+[Mermaid](https://mermaidjs.github.io/)
+{``mermaid
+graph LR
+A{Register} -- Login --> B((Movies))
+B --> C(Delete)
+B --> D[Rent]
+D --> C
+C --> B
+``}
+![Diagram](https://i.ibb.co/GQbjD3m/image.png)
+
+## For Register
+
+#### For register you need:
+- Name (String).
+- Email (Example: user@mail.com).
+- Password (Example: 1234!Qwer) - (From 8 to 10 characters | symbol: *?! | One capital letter).
+
+![Register](https://i.ibb.co/yPbVpmL/image.png)
+
+## For Login
+
+#### For login you need:
+- Email (Example: user@mail.com).
+- Password (Example: 1234!Qwer).
+
+![Login](https://i.ibb.co/yPbVpmL/image.png)
+
+## For View Movies and Rent
+
+##### For view movies and rent you move the scroll &:
+- Click on Movie of rent.
+- Click on button to rent.
+- Go to user profile view.
+
+![Login](https://i.ibb.co/yPbVpmL/image.png)
+
