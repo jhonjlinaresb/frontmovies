@@ -9,6 +9,9 @@ This is the **Frontendmovies**. An application that performs actions such as:
 - Films for rent. 
 
  **Technologies Used** 
+ - MySQL
+ - Express
+ - Heroku
  - ReactJS 
  - Redux 
  - Router DOM 
@@ -41,12 +44,12 @@ This is the diagram as it works at the User level:
 {``mermaid
 graph LR
 A{Register} -- Login --> B((Movies))
-B --> C(Delete)
-B --> D[Rent]
+B --> C(Return)
+B --> D(Rent)
 D --> C
 C --> B
 ``}
-![Diagram](https://i.ibb.co/GQbjD3m/image.png)
+![Diagram](https://i.ibb.co/CK6qpPK/image.png)
 
 ## For Register
 
