@@ -1,0 +1,10 @@
+.aligned{
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    & div{
+        margin: 1vw;
+    }
+}
