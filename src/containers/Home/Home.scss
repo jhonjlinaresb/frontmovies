@@ -21,6 +21,9 @@
     justify-content: center;
     height: 50vh;
 }
+.center:hover > .jpg2{
+    opacity: 0%;
+}
 .movies{
     width: 200vw;
     height: 53vh;
@@ -97,4 +100,29 @@
     display: flex;
     height: 70vh;
     align-items: center;
+}
+.jpg2{
+    display: flex;
+    width: 101vw;
+    height: 64vh;
+    transition: ease-in-out 1s;
+    z-index: -1;
+}
+.gif1{
+    opacity: 100%;
+    position: absolute;
+    z-index: -2;
+    width: 101vw;
+    height: 64vh;
+}
+.jpg2:hover > img{
+    display: flex;
+    width: 101vw;
+    height: 64vh;
+    opacity: 100%;
+    transition: ease-in-out 0.5s;    
+}
+.Movietext{
+    position: fixed;
+    font-size: 5vh;
 }

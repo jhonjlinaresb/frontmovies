@@ -73,13 +73,16 @@ const Home =(props) =>{
         updateMovie();
     }
     console.log(props.user);
+
+
     return (     
     <div>
         {props.user 
         ?<div>
+            <p className="Movietext">Spider-man: homecoming</p>
             <div className="center">
-            User has a token
-            <img src="" alt=""/>
+            <img className="gif1" src="https://giffiles.alphacoders.com/817/81706.gif" alt=""/>
+            <img className="jpg2" src="https://media.comicbook.com/2016/12/spider-man-homecoming-atm-robbery-scene-217610-1280x0.jpg" alt=""/>
             </div>
             <div className="moviesContent" onScroll={handleScroll}>
                 <div className="movies">
