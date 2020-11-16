@@ -5,7 +5,7 @@ import './Footer.scss'
 const Footer = () => {
     return(
      <div className="footer">
-         this is the footer    
+         ©2020 - GeeksHubs Academy - Gor Vardayan - Ignacio Merello - Jhon Jairo Linares  | VALENCIA-SPAIN 
      </div>   
     )
 }

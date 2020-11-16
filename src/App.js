@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
-// import logo from './logo.svg';
+//import React, {useState} from 'react'
+//import logo from './logo.svg';
+//import logo from './logo.svg';
 //import {useEffect} from 'react';
 //import {useState} from 'react';
 import { Switch, BrowserRouter, Route, useParams } from 'react-router-dom'
@@ -84,7 +86,9 @@ function App() {
           </Route>
           <Route path='/register' component={Register} exact />
           <Route path='/movie/:id' children={<Movie user={user} setUser={setUser} />} exact />
-          <Route path='/profile' component={Profile} exact />
+          <Route path='/profile' exact >
+            <Profile  user = {user} setUser={setUser}></Profile>
+          </Route>
         </Switch>
         <Footer/>
         </Route>

@@ -1,9 +1,42 @@
 .profileContainer {
-    width: 50vw;
-    height: 100vh;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    margin: 7em;
+    justify-content: space-evenly;
+}
+
+#userLogo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    position: absolute;
+    top: 15em;
+}
+.userInformation {
+    width: 20vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 2.5em;
+}
+.userInformation:hover{
+    bottom: 5px;
+    border-bottom: black 2px solid;
+}
+
+.userMovie {
+    width: 40vw;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 0 25vw 0 25vw;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 2.5em;
 }

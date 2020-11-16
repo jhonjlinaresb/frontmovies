@@ -28,8 +28,12 @@
     display: inline-block;
     margin-left: 15%;
 }
-
-.registerButton{
+.linksContainer{
+    display: flex;
+    flex-direction: row;
+}
+.headerButtons{
+    color: black;
     width: 20vw;
     margin: 1em;
     height: 3em;
