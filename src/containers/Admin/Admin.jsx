@@ -15,18 +15,20 @@ function Admin() {
     },[])
     
     return (
-        <div className="aligned">
+        <div className="tableView">
+        <table className="aligned">
+            <tr><td>NAME</td><td>EMAIL</td><td>RENTED</td></tr>
             {users.map(item=>{
-                return (<div className="row">
-                    {console.log(item)}
-                    <div>Name: {item.name}</div>
-                    <div>Email: {item.email}</div>
+                return (<tr>
+                    <td>{item.name}</td>
+                    <td>{item.email}</td>
                     {item.rented
-                    ?<div>Rented Movie: {item.rented}</div>
-                    :<div></div>
+                    ?<td>{item.rented}</td>
+                    :<td></td>
                     }
-                </div>)
+                </tr>)
             })}
+        </table>
         </div>
     )
 }

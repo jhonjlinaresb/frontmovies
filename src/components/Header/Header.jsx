@@ -24,7 +24,7 @@ const Header = ({user,setUser}) => {
                 <Link to='/' onClick={logoutUser}><button className="headerButtons">Logout</button></Link>
             </div>
         </div>
-        :<div>
+        :<div className="linksContainer">
             <div className="registerContainer">
                 <Link to='/login'><button className="headerButtons">Login</button></Link>
             </div>

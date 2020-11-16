@@ -1,10 +1,13 @@
-.aligned{
+
+.tableView{
     display: flex;
-    flex-direction: column;
 }
-.row{
-    display: flex;
-    & div{
-        margin: 1vw;
-    }
+.aligned{
+    background-color: darkgrey;
+    padding: 5vh;
+}
+
+td{
+    border: solid black 1px;
+    padding :1vh;
 }

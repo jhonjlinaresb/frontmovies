@@ -75,8 +75,8 @@ const Home =(props) =>{
     console.log(props.user);
     return (     
     <div>
-        {props.user ?
-        <div>
+        {props.user 
+        ?<div>
             <div className="center">
             User has a token
             <img src="" alt=""/>
@@ -93,9 +93,8 @@ const Home =(props) =>{
                 <button className="next_page" onClick={getNext}>next page</button>
             </div>   
         </div> 
-        :
-        <div>      
-            Rental movies Web page, register to rent a movie
+        :<div className="homeMain">      
+            <div className="maintext" >Rental movies Web page,<p> register to rent a movie</p></div>
         </div>
         }
     </div>

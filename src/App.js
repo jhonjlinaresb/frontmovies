@@ -61,13 +61,13 @@ const Movie = ({user,setUser}) =>{
             }
         </div>  
       </span>
-      :<span>Cargando...</span>
+      :<span>Loading...</span>
     }
     </div>);
 }
 
 function App() {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
    console.log(user)
   return (
     <BrowserRouter>
