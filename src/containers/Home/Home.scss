@@ -91,11 +91,14 @@
     border-width: 1px;
     background-color: #4f4f4f;
 }
-.maintext{
-    font-size: 13vh;
+.maintext {
+    font-size: calc(10vh - 2vw);
     font-weight: 900;
     color: #ffffff;
+    margin: 15% 2% 0 2%;
+    text-align: center;
 }
+
 .homeMain{
     display: flex;
     height: 70vh;

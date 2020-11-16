@@ -45,14 +45,14 @@ After...
 This is the diagram as it works at the User level:
 
 [Mermaid](https://mermaidjs.github.io/)
-{``mermaid
+``mermaid
 graph LR
 A{Register} -- Login --> B((Movies))
 B --> C(Return)
 B --> D(Rent)
 D --> C
 C --> B
-``}
+``
 ![Diagram](https://i.ibb.co/CK6qpPK/image.png)
 
 ## For Register
@@ -62,7 +62,7 @@ C --> B
 - Email (Example: user@mail.com).
 - Password (Example: 1234!Qwer) - (From 8 to 10 characters | symbol: *?! | One capital letter).
 
-![Register](https://i.ibb.co/yPbVpmL/image.png)
+![Register](https://i.ibb.co/mHVk4x5/image.png)
 
 ## For Login
 
@@ -70,7 +70,7 @@ C --> B
 - Email (Example: user@mail.com).
 - Password (Example: 1234!Qwer).
 
-![Login](https://i.ibb.co/yPbVpmL/image.png)
+![Login](https://i.ibb.co/3vpdWf6/image.png)
 
 ## For View Movies and Rent
 
@@ -79,6 +79,6 @@ C --> B
 - Click on button to rent.
 - Go to user profile view.
 
-![Login](https://i.ibb.co/yPbVpmL/image.png)
+[![Rent](https://i.gyazo.com/4ba0cdac726f5d6eb5cad01508cbd9dd.gif)](https://gyazo.com/4ba0cdac726f5d6eb5cad01508cbd9dd)
 
 Finish!
