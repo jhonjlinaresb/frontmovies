@@ -62,8 +62,10 @@ function Profile ({ user ,setUser }) {
             }
         </div>)
     }
-  
-    return (
+
+
+
+        return (
         <div className="profileContainer">
                 <div className="userInformation">
                 <h3>User data</h3>
