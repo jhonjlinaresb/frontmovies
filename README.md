@@ -37,14 +37,14 @@ After...
 
 This is the diagram as it works at the User level:
 
-```mermaid
+``mermaid
 graph LR
 A{Register} -- Login --> B((Movies))
 B --> C(Delete)
 B --> D[Rent]
 D --> C
 C --> B
-```
+``
 
 ## For Register
 
