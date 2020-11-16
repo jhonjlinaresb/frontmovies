@@ -1,7 +1,7 @@
 import React from 'react'
 import './Profile.scss'
 
-function Profile ({ setUser }) {
+function Profile ({ user, movie }) {
     axios.get('https://peliculasdb.herokuapp.com/user/profile')
     .then(res => {res.data.user}  )    
     return (

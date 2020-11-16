@@ -19,4 +19,16 @@ This is the **Frontendmovies**. An application that performs actions such as:
 
 ## Create files and folders
 
- Getting Started with  **Create React App** and install dependencies.
+ Getting Started with  **Create React App** and install dependencies:
+
+  >npm i -y 
+
+After...
+
+ >npm start
+
+## Created By:
+
+- Jhon Jairo Linares [GitHub](https://github.com/jhonjlinaresb)
+- Gor Vardayan [GitHub](https://github.com/Gor-vardanyan)
+- Ignacio Merello [GitHub](https://github.com/ignaciomerello)
