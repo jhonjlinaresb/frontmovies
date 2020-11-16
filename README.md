@@ -27,11 +27,24 @@ After...
 
  >npm start
 
-## Created By:
+## Created By;
 
 - Jhon Jairo Linares [GitHub](https://github.com/jhonjlinaresb)
 - Gor Vardayan [GitHub](https://github.com/Gor-vardanyan)
 - Ignacio Merello [GitHub](https://github.com/ignaciomerello)
+
+## Diagram
+
+This is the diagram as it works at the User level:
+
+```mermaid
+graph LR
+A{Register} -- Login --> B((Movies))
+B --> C(Delete)
+B --> D[Rent]
+D --> C
+C --> B
+```
 
 ## For Register
 
