@@ -10,6 +10,8 @@ This is the **Frontendmovies**. An application that performs actions such as:
 
  **Technologies Used** 
  - MySQL
+ - Express
+ - Heroku
  - ReactJS 
  - Redux 
  - Router DOM 
