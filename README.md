@@ -1,6 +1,6 @@
 # Frontend RENTALMOVIES
 
-[Heroku Deply](https://frontrentalmovies.herokuapp.com/)
+[Heroku Deploy](https://frontrentalmovies.herokuapp.com/)
 
 This is the **Frontendmovies**. An application that performs actions such as:
 
@@ -81,3 +81,4 @@ C --> B
 
 ![Login](https://i.ibb.co/yPbVpmL/image.png)
 
+Finish!
