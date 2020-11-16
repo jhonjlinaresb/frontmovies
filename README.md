@@ -36,15 +36,16 @@ After...
 ## Diagram
 
 This is the diagram as it works at the User level:
-
-``mermaid
+[Mermaid](https://mermaidjs.github.io/)
+```mermaid
 graph LR
 A{Register} -- Login --> B((Movies))
 B --> C(Delete)
 B --> D[Rent]
 D --> C
 C --> B
-``
+```
+![Diagram](https://i.ibb.co/GQbjD3m/image.png)
 
 ## For Register
 
@@ -53,4 +54,4 @@ C --> B
 - Email (Example: user@mail.com).
 - Password (from 8 to 10 characters | symbol: *?! | One capital letter).
 
-![enter image description here](https://i.ibb.co/yPbVpmL/image.png)
+![Register](https://i.ibb.co/yPbVpmL/image.png)
