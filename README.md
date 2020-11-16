@@ -62,7 +62,7 @@ C --> B
 - Email (Example: user@mail.com).
 - Password (Example: 1234!Qwer) - (From 8 to 10 characters | symbol: *?! | One capital letter).
 
-![Register](https://ibb.co/gSbSfzn)
+![Register](https://i.ibb.co/mHVk4x5/image.png)
 
 ## For Login
 
@@ -70,7 +70,7 @@ C --> B
 - Email (Example: user@mail.com).
 - Password (Example: 1234!Qwer).
 
-![Login](https://ibb.co/Jqvt2x6)
+![Login](https://i.ibb.co/3vpdWf6/image.png)
 
 ## For View Movies and Rent
 
@@ -79,6 +79,6 @@ C --> B
 - Click on button to rent.
 - Go to user profile view.
 
-![Rent](https://drive.google.com/file/d/1OmH_FkDhraCeYD99DPJvgGDajfN8e837/view?usp=sharing)
+[![Rent](https://i.gyazo.com/4ba0cdac726f5d6eb5cad01508cbd9dd.gif)](https://gyazo.com/4ba0cdac726f5d6eb5cad01508cbd9dd)
 
 Finish!
